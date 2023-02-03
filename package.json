@@ -9,15 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.24.4",
     "@tanstack/react-router": "0.0.1-beta.70",
     "ky": "^0.33.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.0",
-    "react-query": "^3.39.3",
     "zustand": "^4.3.2"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^4.24.4",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
