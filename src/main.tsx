@@ -1,14 +1,14 @@
-import React, {Suspense} from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import './i18n';
+import React, { Suspense } from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './index.css'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import './i18n'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <Suspense fallback={<div>Loading...</div>}>
@@ -16,5 +16,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       </Suspense>
       <ReactQueryDevtools />
     </QueryClientProvider>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)

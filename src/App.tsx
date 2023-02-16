@@ -1,6 +1,6 @@
-import "./App.css";
-import {useTranslation} from "react-i18next";
-import {ChangeLanguageButtons} from "./locales/ChangeLanguageButtons";
+import './App.css'
+import { useTranslation } from 'react-i18next'
+import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
 
 // const wait = (duration: number) =>
 //   new Promise((resolve) => setTimeout(resolve, duration));
@@ -10,7 +10,7 @@ import {ChangeLanguageButtons} from "./locales/ChangeLanguageButtons";
 //   { id: 2, title: "Post 2" },
 // ];
 function App() {
-  const {t} = useTranslation();
+  const { t } = useTranslation()
 
   // const postsQuery = useQuery({
   //   queryKey: ["posts"],
@@ -25,8 +25,6 @@ function App() {
   // if (postsQuery.isLoading) return <h1>Loading...</h1>;
   // if (postsQuery.isError) return <pre>{JSON.stringify(postsQuery.error)}</pre>;
 
-
-
   return (
     <div>
       <ChangeLanguageButtons />
@@ -38,10 +36,9 @@ function App() {
       {/*  Add New*/}
       {/*</button>*/}
 
-
-<div>{t('greetings')}</div>
+      <div>{t('greetings')}</div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
