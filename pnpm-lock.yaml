@@ -19,6 +19,7 @@ specifiers:
   eslint-config-airbnb: ^19.0.4
   eslint-config-airbnb-typescript: ^17.0.0
   eslint-config-prettier: ^8.6.0
+  eslint-plugin-eslint-comments: ^3.2.0
   eslint-plugin-import: ^2.27.5
   eslint-plugin-jsx-a11y: ^6.7.1
   eslint-plugin-prettier: ^4.2.1
@@ -84,6 +85,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.1.0_vite@4.1.2
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.34.0
+  eslint-plugin-eslint-comments: 3.2.0_eslint@8.34.0
   husky: 8.0.3
   lint-staged: 13.1.2
   postcss: 8.4.21
@@ -1463,6 +1465,12 @@ packages:
       { integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw== }
     engines: { node: '>=6' }
 
+  /escape-string-regexp/1.0.5:
+    resolution:
+      { integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg== }
+    engines: { node: '>=0.8.0' }
+    dev: true
+
   /escape-string-regexp/4.0.0:
     resolution:
       { integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA== }
@@ -1571,6 +1579,18 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /eslint-plugin-eslint-comments/3.2.0_eslint@8.34.0:
+    resolution:
+      { integrity: sha512-0jkOl0hfojIHHmEHgmNdqv4fmh7300NdpA9FFpF7zaoLvB/QeXOGNLIo86oAveJFrfB1p05kC8hpEMHM8DwWVQ== }
+    engines: { node: '>=6.5.0' }
+    peerDependencies:
+      eslint: '>=4.19.1'
+    dependencies:
+      escape-string-regexp: 1.0.5
+      eslint: 8.34.0
+      ignore: 5.2.4
+    dev: true
 
   /eslint-plugin-import/2.27.5_mcvs2y73sfmcxqzpjj5lr7a2m4:
     resolution:
