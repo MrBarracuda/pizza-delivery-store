@@ -4,7 +4,6 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.cjs'],
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -17,7 +16,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: ["./tsconfig.json"],
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -61,7 +60,7 @@ module.exports = {
     'react/require-default-props': 0,
     'react/jsx-props-no-spreading': 0,
     'react-hooks/rules-of-hooks': 'error',
-    // 'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'error',
     'react/destructuring-assignment': 'error',
 
     camelcase: 'off',
