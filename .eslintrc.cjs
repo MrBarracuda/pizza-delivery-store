@@ -1,4 +1,6 @@
 module.exports = {
+  root: true,
+  plugins: ['react', 'eslint-comments', '@typescript-eslint', 'prettier'],
   env: {
     browser: true,
     es2021: true,
@@ -20,8 +22,11 @@ module.exports = {
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
+    cacheLifetime: {
+      glob: 'Infinity',
+    },
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  ignorePatterns: ['vite-config.ts', 'tsconfig.json', 'temp.js', '**/vendor/*.js'],
   rules: {
     'prettier/prettier': 'error',
 
@@ -71,5 +76,21 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': ['warn', { ignoreVoid: true, ignoreIIFE: true }],
     'no-void': ['warn', { allowAsStatement: true }],
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
+
+    // disallow duplicate eslint-disable comments
+    'eslint-comments/no-duplicate-disable': 'error',
+    // disallow eslint-disable comments without rule names
+    'eslint-comments/no-unlimited-disable': 'error',
+    // disallow unused eslint-disable comments
+    'eslint-comments/no-unused-disable': 'error',
   },
+  overrides: [
+    {
+      files: ['src/utils/**'], // Or *.test.js
+      rules: {
+        'import/no-default-export': 0,
+        '@typescript-eslint/no-unnecessary-condition': 0,
+      },
+    },
+  ],
 }
