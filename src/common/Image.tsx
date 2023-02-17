@@ -1,7 +1,8 @@
 import { useImageOnLoad } from '../utils'
-import { CSSProperties } from 'react'
 
-type ImageProps = {
+import type { CSSProperties } from 'react'
+
+interface ImageProps {
   src: {
     thumbnail: string
     fullSize: string
@@ -24,11 +25,11 @@ export const Image = ({ src, alt, loading = 'lazy', decoding = 'async' }: ImageP
 
   return (
     <picture>
-      {/*<source type="image/webp" srcSet={''} />*/}
+      {/* <source type="image/webp" srcSet={''} /> */}
       <img
         src={src.thumbnail}
         alt={alt}
-        style={{ ...style, ...(css.thumbnail as CSSProperties) }}
+        style={{ ...style, ...css.thumbnail }}
         loading={loading}
         decoding={decoding}
         // srcSet={''}
@@ -38,7 +39,7 @@ export const Image = ({ src, alt, loading = 'lazy', decoding = 'async' }: ImageP
         onLoad={handleImageOnLoad}
         src={src.fullSize}
         alt={alt}
-        style={{ ...style, ...(css.fullSize as CSSProperties) }}
+        style={{ ...style, ...css.fullSize }}
         loading={loading}
         decoding={decoding}
         // srcSet={''}

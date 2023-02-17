@@ -29,10 +29,11 @@ module.exports = {
     // '@typescript-eslint/explicit-module-boundary-types': 'warn',
 
     'no-duplicate-imports': 0,
+    "@typescript-eslint/non-nullable-type-assertion-style": 0,
     '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
     '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
     'import/prefer-default-export': 0,
-    'import/newline-after-import': ['warning', { count: 1 }],
+    'import/newline-after-import': ['error', { count: 1 }],
     'import/order': [
       'error',
       {

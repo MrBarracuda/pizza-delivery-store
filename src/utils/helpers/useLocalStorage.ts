@@ -1,7 +1,9 @@
-import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
-import useEventListener from './useEventListener'
 import { useEventCallback } from './useEventCallback'
+import useEventListener from './useEventListener'
+
+import type { Dispatch, SetStateAction } from 'react'
 
 declare global {
   interface WindowEventMap {
@@ -64,7 +66,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T): [T, SetValue<T
 
   const handleStorageChange = useCallback(
     (event: StorageEvent | CustomEvent) => {
-      if ((event as StorageEvent)?.key && (event as StorageEvent).key !== key) {
+      if ((event as StorageEvent).key && (event as StorageEvent).key !== key) {
         return
       }
       setStoredValue(readValue())
