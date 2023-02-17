@@ -62,6 +62,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T): [T, SetValue<T
 
   useEffect(() => {
     setStoredValue(readValue())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleStorageChange = useCallback(
