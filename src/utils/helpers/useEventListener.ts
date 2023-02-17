@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect'
 
@@ -39,6 +39,7 @@ function useEventListener<
   KW extends keyof WindowEventMap,
   KH extends keyof HTMLElementEventMap,
   KM extends keyof MediaQueryListEventMap,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
   T extends HTMLElement | MediaQueryList | void = void,
 >(
   eventName: KW | KH | KM,
@@ -57,7 +58,7 @@ function useEventListener<
     // Define the listening target
     const targetElement: T | Window = element?.current ?? window
 
-    if (!(targetElement && targetElement.addEventListener)) return
+    if (!targetElement?.addEventListener) return
 
     // Create event listener that calls handler function stored in ref
     const listener: typeof handler = (event) => savedHandler.current(event)

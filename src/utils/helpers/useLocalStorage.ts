@@ -13,6 +13,17 @@ declare global {
 
 type SetValue<T> = Dispatch<SetStateAction<T>>
 
+// A wrapper for "JSON.parse()"" to support "undefined" value
+function parseJSON<T>(value: string | null): T | undefined {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return value === 'undefined' ? undefined : JSON.parse(value ?? '')
+  } catch {
+    console.error('parsing error on', { value })
+    return undefined
+  }
+}
+
 export const useLocalStorage = <T>(key: string, initialValue: T): [T, SetValue<T>] => {
   // Get from local storage then
   // parse stored json or return initialValue
@@ -83,14 +94,4 @@ export const useLocalStorage = <T>(key: string, initialValue: T): [T, SetValue<T
   useEventListener('local-storage', handleStorageChange)
 
   return [storedValue, setValue]
-}
-
-// A wrapper for "JSON.parse()"" to support "undefined" value
-function parseJSON<T>(value: string | null): T | undefined {
-  try {
-    return value === 'undefined' ? undefined : JSON.parse(value ?? '')
-  } catch {
-    console.log('parsing error on', { value })
-    return undefined
-  }
 }
