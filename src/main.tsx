@@ -1,12 +1,13 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import App from './App'
 
 import './index.css'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 import './i18n'
 
 const queryClient = new QueryClient()

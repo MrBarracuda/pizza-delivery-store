@@ -1,5 +1,6 @@
 // import { CartItem } from '../features/cart'
 
+// eslint-disable-next-line
 export const calculateTotalPrice = (items: any[]) => items.reduce((sum, item) => item.price * item.count + sum, 0)
 
 // import IFilter from "../interfaces/IFilters";
