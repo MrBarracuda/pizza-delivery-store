@@ -1,10 +1,12 @@
+import { ErrorMessage } from '@hookform/error-message'
 import classNames from 'classnames'
 import get from 'lodash.get'
 
-import { RegisterOptions, DeepMap, FieldError, UseFormRegister, Path } from 'react-hook-form'
-import { ErrorMessage } from '@hookform/error-message'
-import { Input, InputProps } from '../atoms/input'
 import { FormErrorMessage } from '../atoms/form-error-message'
+import { Input } from '../atoms/input'
+
+import type { InputProps } from '../atoms/input'
+import type { RegisterOptions, DeepMap, FieldError, UseFormRegister, Path } from 'react-hook-form'
 
 export type FormInputProps<TFormValues> = {
   name: Path<TFormValues>

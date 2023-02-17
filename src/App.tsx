@@ -1,9 +1,10 @@
 import './App.css'
 import { useTranslation } from 'react-i18next'
-import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
-import { Image } from './common/Image'
-import thumbnailPhoto from './assets/photo_small.webp'
+
 import fullSizePhoto from './assets/photo.jpg'
+import thumbnailPhoto from './assets/photo_small.webp'
+import { Image } from './common/Image'
+import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
 
 // const wait = (duration: number) =>
 //   new Promise((resolve) => setTimeout(resolve, duration));
@@ -35,12 +36,12 @@ function App() {
       </div>
       <ChangeLanguageButtons />
 
-      {/*{postsQuery.data.map((post) => (*/}
-      {/*  <div key={post.id}>{post.title}</div>*/}
-      {/*))}*/}
-      {/*<button onClick={() => newPostMutation.mutate("New Post")}>*/}
-      {/*  Add New*/}
-      {/*</button>*/}
+      {/* {postsQuery.data.map((post) => ( */}
+      {/*  <div key={post.id}>{post.title}</div> */}
+      {/* ))} */}
+      {/* <button onClick={() => newPostMutation.mutate("New Post")}> */}
+      {/*  Add New */}
+      {/* </button> */}
 
       <div>{t('greetings')}</div>
     </div>
