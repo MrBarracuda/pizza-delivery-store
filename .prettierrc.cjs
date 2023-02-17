@@ -8,4 +8,4 @@ module.exports = {
   printWidth: 120,
   jsxSingleQuote: false,
   bracketSpacing: true,
-};
+}

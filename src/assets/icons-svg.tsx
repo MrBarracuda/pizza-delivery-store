@@ -7,7 +7,7 @@ export const BinIcon = () => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-6 h-6 hover:stroke-gray-900 stroke-gray-400"
+    className="h-6 w-6 stroke-gray-400 hover:stroke-gray-900"
   >
     <path
       strokeLinecap="round"
@@ -41,7 +41,7 @@ export const ProfileIcon = () => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-6 h-6"
+    className="h-6 w-6"
   >
     <path
       strokeLinecap="round"
@@ -58,7 +58,7 @@ export const HeartIcon = () => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-6 h-6"
+    className="h-6 w-6"
   >
     <path
       strokeLinecap="round"
