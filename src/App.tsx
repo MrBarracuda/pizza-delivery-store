@@ -1,6 +1,9 @@
 import './App.css'
 import { useTranslation } from 'react-i18next'
 import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
+import { Image } from './common/Image'
+import thumbnailPhoto from './assets/photo_small.webp'
+import fullSizePhoto from './assets/photo.jpg'
 
 // const wait = (duration: number) =>
 //   new Promise((resolve) => setTimeout(resolve, duration));
@@ -27,6 +30,9 @@ function App() {
 
   return (
     <div>
+      <div className="relative w-96 h-96">
+        <Image src={{ thumbnail: thumbnailPhoto, fullSize: fullSizePhoto }} alt="photo" />
+      </div>
       <ChangeLanguageButtons />
 
       {/*{postsQuery.data.map((post) => (*/}
