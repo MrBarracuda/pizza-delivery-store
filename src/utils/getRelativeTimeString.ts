@@ -3,7 +3,7 @@
  * "a minute ago", "in 2 hours", "yesterday", "3 months ago", etc.
  * using Intl.RelativeTimeFormat
  */
-export function getRelativeTimeString(date: Date | number, language = navigator.language): string {
+export const getRelativeTimeString = (date: Date | number, language = navigator.language): string => {
   // Allow dates or times to be passed
   const timeMs = typeof date === 'number' ? date : date.getTime()
 
