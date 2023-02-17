@@ -1,5 +1,8 @@
-import { DependencyList, EffectCallback, useEffect } from 'react'
+import { useEffect } from 'react'
+
 import { useIsFirstRender } from './useIsFirstRender'
+
+import type { DependencyList, EffectCallback } from 'react'
 
 export const useUpdateEffect = (effect: EffectCallback, deps?: DependencyList) => {
   const isFirst = useIsFirstRender()
@@ -8,5 +11,6 @@ export const useUpdateEffect = (effect: EffectCallback, deps?: DependencyList) =
     if (!isFirst) {
       return effect()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps)
 }

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 export const useMediaQuery = (query: string): boolean => {
-  const getMatches = (query: string): boolean => {
+  const getMatches = (queryToMatch: string): boolean => {
     // Prevents SSR issues
     if (typeof window !== 'undefined') {
-      return window.matchMedia(query).matches
+      return window.matchMedia(queryToMatch).matches
     }
     return false
   }
@@ -35,6 +35,7 @@ export const useMediaQuery = (query: string): boolean => {
         matchMedia.removeEventListener('change', handleChange)
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query])
 
   return matches

@@ -1,10 +1,11 @@
 module.exports = {
+  root: true,
+  plugins: ['react', 'eslint-comments', '@typescript-eslint', 'prettier'],
   env: {
     browser: true,
     es2021: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.cjs'],
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -17,23 +18,26 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: ['./tsconfig.json'],
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
+    cacheLifetime: {
+      glob: 'Infinity',
+    },
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  ignorePatterns: ['./.husky/pre-commit'],
   rules: {
     'prettier/prettier': 'error',
 
     'consistent-return': 0,
     // '@typescript-eslint/explicit-module-boundary-types': 'warn',
-
     'no-duplicate-imports': 0,
+    '@typescript-eslint/non-nullable-type-assertion-style': 0,
     '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
     '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
     'import/prefer-default-export': 0,
-    'import/newline-after-import': ['warning', { count: 1 }],
+    'import/newline-after-import': ['error', { count: 1 }],
     'import/order': [
       'error',
       {
@@ -42,6 +46,7 @@ module.exports = {
         alphabetize: { order: 'asc', caseInsensitive: true },
       },
     ],
+    'no-console': ['error', { allow: ['warn', 'error', 'debug'] }],
 
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': [
@@ -61,15 +66,31 @@ module.exports = {
     'react/require-default-props': 0,
     'react/jsx-props-no-spreading': 0,
     'react-hooks/rules-of-hooks': 'error',
-    // 'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'error',
     'react/destructuring-assignment': 'error',
 
-    'camelcase': 'off',
+    camelcase: 'off',
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',
     // '@typescript-eslint/consistent-type-definitions': 0,
     '@typescript-eslint/no-floating-promises': ['warn', { ignoreVoid: true, ignoreIIFE: true }],
     'no-void': ['warn', { allowAsStatement: true }],
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
+
+    // disallow duplicate eslint-disable comments
+    'eslint-comments/no-duplicate-disable': 'error',
+    // disallow eslint-disable comments without rule names
+    'eslint-comments/no-unlimited-disable': 'error',
+    // disallow unused eslint-disable comments
+    'eslint-comments/no-unused-disable': 'error',
   },
-};
+  overrides: [
+    {
+      files: ['src/utils/**'], // Or *.test.js
+      rules: {
+        'import/no-default-export': 0,
+        '@typescript-eslint/no-unnecessary-condition': 0,
+      },
+    },
+  ],
+}

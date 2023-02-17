@@ -3,5 +3,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('daisyui'), require('tailwindcss-debug-screens'), require('@tailwindcss/typography'),],
-};
+  plugins: [require('daisyui'), require('tailwindcss-debug-screens'), require('@tailwindcss/typography')],
+}
