@@ -16,7 +16,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ["./tsconfig.json"],
+    project: ['./tsconfig.json'],
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -28,7 +28,7 @@ module.exports = {
     'consistent-return': 0,
     // '@typescript-eslint/explicit-module-boundary-types': 'warn',
     'no-duplicate-imports': 0,
-    "@typescript-eslint/non-nullable-type-assertion-style": 0,
+    '@typescript-eslint/non-nullable-type-assertion-style': 0,
     '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
     '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
     'import/prefer-default-export': 0,
@@ -41,6 +41,7 @@ module.exports = {
         alphabetize: { order: 'asc', caseInsensitive: true },
       },
     ],
+    'no-console': ['error', { allow: ['warn', 'error', 'debug'] }],
 
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': [
