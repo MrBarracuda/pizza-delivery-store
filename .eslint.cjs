@@ -64,7 +64,7 @@ module.exports = {
     // 'react-hooks/exhaustive-deps': 'warn',
     'react/destructuring-assignment': 'error',
 
-    'camelcase': 'off',
+    camelcase: 'off',
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',
     // '@typescript-eslint/consistent-type-definitions': 0,
@@ -72,4 +72,4 @@ module.exports = {
     'no-void': ['warn', { allowAsStatement: true }],
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
   },
-};
+}

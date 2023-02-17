@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <div className="relative w-96 h-96">
+      <div className="relative h-96 w-96">
         <Image src={{ thumbnail: thumbnailPhoto, fullSize: fullSizePhoto }} alt="photo" />
       </div>
       <ChangeLanguageButtons />
