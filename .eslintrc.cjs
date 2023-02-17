@@ -27,7 +27,6 @@ module.exports = {
 
     'consistent-return': 0,
     // '@typescript-eslint/explicit-module-boundary-types': 'warn',
-
     'no-duplicate-imports': 0,
     "@typescript-eslint/non-nullable-type-assertion-style": 0,
     '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
