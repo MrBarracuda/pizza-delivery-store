@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+  }
+
+  /* Scroll */
+  .scroll-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-style::-webkit-scrollbar {
+    scroll-behavior: smooth;
+  }
+
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
