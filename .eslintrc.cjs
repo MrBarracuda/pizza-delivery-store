@@ -26,7 +26,7 @@ module.exports = {
       glob: 'Infinity',
     },
   },
-  ignorePatterns: ['vite-config.ts', 'tsconfig.json', 'temp.js', '**/vendor/*.js'],
+  ignorePatterns: ['./.husky/pre-commit'],
   rules: {
     'prettier/prettier': 'error',
 
