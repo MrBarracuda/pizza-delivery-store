@@ -10,8 +10,8 @@
     "prepare": "husky install",
     "prettier": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint src .",
+    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
@@ -68,9 +68,9 @@
     }
   },
   "lint-staged": {
-    "*": [
-      "prettier --write .",
-      "eslint --fix --ext .js,.jsx, .ts, .tsx ."
+    "'*.{js,jsx,json,md,ts,tsx}'": [
+      "pnpm run format",
+      "pnpm run lint:fix"
     ]
   }
 }
