@@ -26,7 +26,7 @@ module.exports = {
       glob: 'Infinity',
     },
   },
-  ignorePatterns: ['./.husky/pre-commit'],
+  ignorePatterns: ['./.husky/pre-commit', 'vite.config.ts'],
   rules: {
     'prettier/prettier': 'error',
     'deprecation/deprecation': 'error',
