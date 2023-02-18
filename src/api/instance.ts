@@ -1,6 +1,6 @@
 import ky from 'ky'
 
-const AUTH_TOKEN = 'someRandomText'
+const AUTH_TOKEN = import.meta.env.VITE_API_KEY
 
 const instance = ky.create({
   prefixUrl: 'http://localhost:8000',
