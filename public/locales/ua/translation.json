@@ -1,3 +1,11 @@
 {
-  "greetings": "Привіт"
+  "greetings": "Привіт",
+  "First name is required": "Обовяʼзково",
+  "Last name is required": "Обовяʼзково",
+  "Email is required": "Обов'язково",
+  "Must be a valid email": "Потрібна дійсна адреса електронної пошти",
+  "Password must be at least 6 characters": "Пароль повинен містити принаймні 6 символів",
+  "Confirm Password is required": "Підтвердження пароля є обов'язковим",
+  "You must accept Terms and Conditions": "Ви повинні прийняти Умови та Положення",
+  "Password don't match": "Паролі не співпадають"
 }
