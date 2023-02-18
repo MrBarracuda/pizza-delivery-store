@@ -9,7 +9,6 @@ void i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    debug: true,
     detection: {
       order: ['querystring', 'cookie'],
       caches: ['cookie'],
