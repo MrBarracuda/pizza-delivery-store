@@ -66,10 +66,7 @@ module.exports = {
         ignoreFunctionTypeParameterNameValueShadow: true,
       },
     ],
-    '@typescript-eslint/no-empty-function': [
-      'error',
-      { allow: ['arrowFunctions'] },
-    ],
+    '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
 
     'import/prefer-default-export': 'off',
     'import/newline-after-import': ['error', { count: 1 }],
