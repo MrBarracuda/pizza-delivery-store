@@ -13,11 +13,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({ label, type = '
       type={type}
       ref={ref}
       name={name}
-      className={
-        props.className
-          ? props.className
-          : 'focus:shadow-outline w-full appearance-none rounded border px-3 py-2 text-sm leading-tight text-gray-700 focus:outline-none'
-      }
+      className={props.className ? props.className : 'input-bordered input-primary input w-full max-w-xs'}
       {...props}
     />
     <ErrorMessage name={name} />
