@@ -2,11 +2,7 @@ import { forwardRef } from 'react'
 
 import { ErrorMessage } from './ErrorMessage'
 
-import type { ComponentProps } from 'react'
-
-interface InputProps extends ComponentProps<'input'> {
-  label: string
-}
+import type { InputProps } from './types'
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ label, type = 'text', ...props }, ref) {
   return (
@@ -27,5 +23,3 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ l
     </div>
   )
 })
-
-

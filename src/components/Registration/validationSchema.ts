@@ -1,7 +1,5 @@
 import { z } from 'zod'
 
-export type ValidationSchema = z.infer<typeof validationSchema>
-
 export const validationSchema = z
   .object({
     firstName: z.string().min(1, { message: 'First name is required' }),

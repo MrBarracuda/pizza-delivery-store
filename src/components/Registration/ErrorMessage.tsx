@@ -1,9 +1,8 @@
 import { useFormContext } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
-interface ErrorMessageProps {
-  name?: string
-}
+import type { ErrorMessageProps } from './types'
+
 export function ErrorMessage({ name }: ErrorMessageProps) {
   const {
     formState: { errors },
@@ -16,5 +15,6 @@ export function ErrorMessage({ name }: ErrorMessageProps) {
 
   if (!error) return null
 
+  // @ts-ignore
   return <span className="mt-2 text-xs italic text-red-500">{t(error.message)}</span>
 }
