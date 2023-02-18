@@ -1,6 +1,6 @@
 export const Navbar = () => {
   return (
-    <div className="navbar bg-primary text-primary-content">
+    <div className="t-0 navbar fixed z-50 bg-primary text-primary-content">
       <div className="flex-1">
         <a className="btn-ghost btn text-xl normal-case">daisyUI</a>
       </div>
