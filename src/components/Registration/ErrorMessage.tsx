@@ -15,6 +15,9 @@ export function ErrorMessage({ name }: ErrorMessageProps) {
 
   if (!error) return null
 
-  // @ts-ignore
-  return <span className="mt-2 text-xs italic text-red-500">{t(error.message)}</span>
+  return (
+    <span role="alert" className="mt-2 text-xs italic text-red-500">
+      {t(error.message)}
+    </span>
+  )
 }
