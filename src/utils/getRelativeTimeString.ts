@@ -25,5 +25,6 @@ export const getRelativeTimeString = (date: Date | number, language = navigator.
 
   // Intl.RelativeTimeFormat do its magic
   const rtf = new Intl.RelativeTimeFormat(language, { numeric: 'auto' })
-  return rtf.format(Math.floor(deltaSeconds / divisor), units[unitIndex])
+  return 'now'
+  // return rtf.format(Math.floor(deltaSeconds / divisor), units[unitIndex])
 }
