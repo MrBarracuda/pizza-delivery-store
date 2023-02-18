@@ -8,7 +8,14 @@ export const RegistrationForm = () => {
   })
 
   return (
-    <Form form={form} onSubmit={(values) => console.log(values)} className="mb-4 px-8 pt-6 pb-8">
+    <Form
+      form={form}
+      onSubmit={(data) => {
+        console.log(data)
+        form.reset()
+      }}
+      className="mb-4 px-8 pt-6 pb-8"
+    >
       <div className="mb-4 md:flex md:justify-between">
         <Input label="First Name" type="text" autoFocus {...form.register('firstName')} />
         <Input label="Last Name" type="text" {...form.register('lastName')} />
@@ -20,7 +27,7 @@ export const RegistrationForm = () => {
         <Input label="Confirm Password" type="password" {...form.register('confirmPassword')} />
       </div>
       <div className="mb-4">
-        <Input label="Accept Terms & Conditions" type="checkbox" className="" {...form.register('terms')} />
+        <Input label="Accept Terms & Conditions" type="checkbox" className="checkbox checkbox-primary" {...form.register('terms')} />
       </div>
       <div className="mb-6 text-center">
         <button
