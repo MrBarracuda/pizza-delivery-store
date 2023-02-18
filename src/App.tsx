@@ -5,6 +5,7 @@ import fullSizePhoto from './assets/photo.jpg'
 import thumbnailPhoto from './assets/photo_small.webp'
 import { Image } from './common/Image'
 import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
+import { RegistrationForm } from './components/Registration/RegistrationForm'
 
 // const wait = (duration: number) =>
 //   new Promise((resolve) => setTimeout(resolve, duration));
@@ -30,20 +31,13 @@ function App() {
   // if (postsQuery.isError) return <pre>{JSON.stringify(postsQuery.error)}</pre>;
 
   return (
-    <div>
-      <div className="relative h-96 w-96">
-        <Image src={{ thumbnail: thumbnailPhoto, fullSize: fullSizePhoto }} alt="photo" />
+    <div className="mx-auto w-full max-w-xl">
+      <div className="my-12 flex justify-center">
+        <div className="w-full rounded-lg bg-white p-5 shadow-xl lg:w-11/12">
+          <h3 className="pt-4 text-center text-2xl font-bold">Create New Account</h3>
+          <RegistrationForm />
+        </div>
       </div>
-      <ChangeLanguageButtons />
-
-      {/* {postsQuery.data.map((post) => ( */}
-      {/*  <div key={post.id}>{post.title}</div> */}
-      {/* ))} */}
-      {/* <button onClick={() => newPostMutation.mutate("New Post")}> */}
-      {/*  Add New */}
-      {/* </button> */}
-
-      <div>{t('greetings')}</div>
     </div>
   )
 }
