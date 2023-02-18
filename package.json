@@ -16,7 +16,6 @@
     "lint:fix": "eslint src --fix"
   },
   "dependencies": {
-    "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^2.9.11",
     "@tanstack/react-query": "^4.24.6",
     "clsx": "^1.2.1",
