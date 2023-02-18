@@ -1,5 +1,5 @@
-import { Form, useForm } from './form'
-import { Input } from './input'
+import { Checkbox, TextInput, Form, useForm, SubmitButton } from '../../common'
+
 import { validationSchema } from './validationSchema'
 
 export const RegistrationForm = () => {
@@ -14,28 +14,23 @@ export const RegistrationForm = () => {
         console.log(data)
         form.reset()
       }}
-      className="mb-4 px-8 pt-6 pb-8"
+      className="form-control w-full max-w-xs"
     >
       <div className="mb-4 md:flex md:justify-between">
-        <Input label="First Name" type="text" autoFocus {...form.register('firstName')} />
-        <Input label="Last Name" type="text" {...form.register('lastName')} />
+        <TextInput label="First Name" autoFocus {...form.register('firstName')} />
+        <TextInput label="Last Name" {...form.register('lastName')} />
       </div>
 
-      <Input label="Email" type="email" placeholder="you@example.com" {...form.register('email')} />
+      <TextInput label="Email" type="email" placeholder="you@example.com" {...form.register('email')} />
       <div className="mb-4 md:flex md:justify-between">
-        <Input label="Password" type="password" {...form.register('password')} />
-        <Input label="Confirm Password" type="password" {...form.register('confirmPassword')} />
+        <TextInput label="Password" type="password" {...form.register('password')} />
+        <TextInput label="Confirm Password" type="password" {...form.register('confirmPassword')} />
       </div>
       <div className="mb-4">
-        <Input label="Accept Terms & Conditions" type="checkbox" className="checkbox checkbox-primary" {...form.register('terms')} />
+        <Checkbox label="Accept Terms & Conditions" {...form.register('terms')} />
       </div>
       <div className="mb-6 text-center">
-        <button
-          className="focus:shadow-outline w-full rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
-          type="submit"
-        >
-          Register Account
-        </button>
+        <SubmitButton text="Register Account" />
       </div>
       <hr className="mb-6 border-t" />
       <div className="text-center">

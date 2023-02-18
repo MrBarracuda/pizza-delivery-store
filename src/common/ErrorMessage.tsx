@@ -1,11 +1,9 @@
 import { useFormContext } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
-import { WarningIcon } from '../../assets/icons-svg'
+import { WarningIcon } from '../assets/icons-svg'
 
-import type { ErrorMessageProps } from './types'
-
-export function ErrorMessage({ name }: ErrorMessageProps) {
+export function ErrorMessage({ name }: { name?: string }) {
   const {
     formState: { errors },
   } = useFormContext()
