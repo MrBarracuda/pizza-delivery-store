@@ -2,14 +2,15 @@ import './App.css'
 
 import { RegistrationContainer } from './components'
 import { Footer } from './components/Footer'
-import { Navbar } from './components/Navbar'
-import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
 import { Hero } from './components/Hero'
-import {PizzaList} from "./components/PizzaList";
+import { Navbar } from './components/Navbar'
+import { PizzaList } from './components/PizzaList'
+import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
 
 function App() {
+  const isDev = import.meta.env.DEV
   return (
-    <main>
+    <main className={`bg-neutral-100 ${isDev ? 'debug-screens' : ''}`}>
       <Navbar />
       <div className="container m-auto">
         <Hero />
