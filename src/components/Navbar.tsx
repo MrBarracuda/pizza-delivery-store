@@ -1,8 +1,14 @@
+const Logo = () => (
+  <a className="btn-ghost btn text-xl uppercase">
+    <span className="mr-0.5 font-extralight">the</span>
+    <span className="font-extrabold">pizza</span>
+  </a>
+)
 export const Navbar = () => {
   return (
     <div className="t-0 navbar fixed z-50 bg-primary text-primary-content">
       <div className="flex-1">
-        <a className="btn-ghost btn text-xl normal-case">daisyUI</a>
+        <Logo />
       </div>
       <div className="flex-none">
         <div className="dropdown-end dropdown">
