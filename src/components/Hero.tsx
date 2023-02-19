@@ -1,4 +1,5 @@
-import {ArrowDown} from "../assets/icons-svg";
+import { ArrowDown } from '../assets/icons-svg'
+import HeroImg from '../assets/img_5.png'
 
 export const Hero = () => {
   const heroText = {
@@ -9,21 +10,26 @@ export const Hero = () => {
   }
 
   const handleClickScroll = () => {
-    const element = document.getElementById('pizza-list');
+    const element = document.getElementById('pizza-list')
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
   return (
     <div className="hero min-h-[60vh]">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+        <img src={HeroImg} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
           <h1 className="text-5xl font-bold">{heroText.title}</h1>
           <p className="py-6">{heroText.description}</p>
-          <button onClick={handleClickScroll} className="btn-primary btn">{heroText.button}<span className="ml-3"><ArrowDown /></span></button>
+          <button onClick={handleClickScroll} className="btn-primary btn">
+            {heroText.button}
+            <span className="ml-3">
+              <ArrowDown />
+            </span>
+          </button>
         </div>
       </div>
     </div>
