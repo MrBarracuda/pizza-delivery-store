@@ -35,7 +35,7 @@ export const PizzaItem = () => {
           <ul className="tabs tabs-boxed">{renderSizes}</ul>
           <ul className="tabs tabs-boxed">{renderDough}</ul>
         </div>
-        <div className="card-actions justify-between items-center">
+        <div className="card-actions items-center justify-between">
           <h4 className="font-bold">15 USD</h4>
           <button type="button" className="btn-primary btn">
             Buy Now
