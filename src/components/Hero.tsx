@@ -1,5 +1,5 @@
 import { ArrowDown } from '../assets/icons-svg'
-import HeroImg from '../assets/img_5.png'
+import HeroImg from '../assets/img_7.png'
 
 export const Hero = () => {
   const heroText = {
@@ -18,9 +18,9 @@ export const Hero = () => {
   }
 
   return (
-    <div className="hero min-h-[60vh]">
+    <div className="hero min-h-[60vh] py-20">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img src={HeroImg} className="max-w-sm rounded-lg shadow-2xl" />
+        <img src={HeroImg} className="max-w-sm" />
         <div>
           <h1 className="text-5xl font-bold">{heroText.title}</h1>
           <p className="py-6">{heroText.description}</p>

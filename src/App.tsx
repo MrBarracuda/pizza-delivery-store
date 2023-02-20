@@ -12,7 +12,6 @@ function App() {
   const isDev = import.meta.env.DEV
   return (
     <main className={`bg-neutral-100 ${isDev ? 'debug-screens' : ''}`}>
-      <NotFound />
       <Navbar />
       <div className="container m-auto">
         <Hero />
@@ -27,6 +26,7 @@ function App() {
       {/*    </div> */}
       {/*  </div> */}
       {/* </div> */}
+      <NotFound />
       <Footer />
     </main>
   )
