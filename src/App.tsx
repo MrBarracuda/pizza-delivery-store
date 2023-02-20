@@ -6,11 +6,13 @@ import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { PizzaList } from './components/PizzaList'
 import { ChangeLanguageButtons } from './locales/ChangeLanguageButtons'
+import { NotFound } from './components/NotFound'
 
 function App() {
   const isDev = import.meta.env.DEV
   return (
     <main className={`bg-neutral-100 ${isDev ? 'debug-screens' : ''}`}>
+      <NotFound />
       <Navbar />
       <div className="container m-auto">
         <Hero />
