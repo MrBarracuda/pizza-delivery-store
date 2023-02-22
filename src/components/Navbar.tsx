@@ -1,3 +1,5 @@
+import { ChangeLanguageButtons } from '../locales/ChangeLanguageButtons'
+
 const Logo = () => (
   <a className="btn-ghost btn text-xl uppercase">
     <span className="mr-0.5 font-extralight">the</span>
@@ -11,6 +13,7 @@ export const Navbar = () => {
         <Logo />
       </div>
       <div className="flex-none">
+        <ChangeLanguageButtons />
         <div className="dropdown-end dropdown">
           <label tabIndex={0} className="btn-ghost btn-circle btn">
             <div className="indicator">

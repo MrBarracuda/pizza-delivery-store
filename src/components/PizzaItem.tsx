@@ -1,5 +1,6 @@
-import Pizza from '../assets/Margarita.jpg'
 import { useState } from 'react'
+
+import Pizza from '../assets/Margarita.jpg'
 
 export const PizzaItem = () => {
   const title = 'Pizza Margarita'
@@ -26,20 +27,22 @@ export const PizzaItem = () => {
   ))
 
   return (
-    <div className="card-compact w-full rounded-md bg-white p-4 p-3 shadow-md md:w-1/2 lg:w-1/3 xl:w-1/4">
-      <img src={Pizza} className="rounded-md" alt="Pizza" />
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p>{ingridiets}</p>
-        <div className="my-2 rounded-md bg-neutral-100 font-bold">
-          <ul className="tabs tabs-boxed">{renderSizes}</ul>
-          <ul className="tabs tabs-boxed">{renderDough}</ul>
-        </div>
-        <div className="card-actions items-center justify-between">
-          <h4 className="font-bold">15 USD</h4>
-          <button type="button" className="btn-primary btn">
-            Buy Now
-          </button>
+    <div className="card-compact w-full p-2 md:w-1/2 lg:w-1/3 xl:w-1/4">
+      <div className="base-content rounded-md p-2 shadow-md">
+        <img src={Pizza} className="rounded-md" alt="Pizza" />
+        <div className="card-body">
+          <h2 className="card-title">{title}</h2>
+          <p>{ingridiets}</p>
+          <div className="base-100 my-2 rounded-md font-bold">
+            <ul className="tabs tabs-boxed mb-1">{renderSizes}</ul>
+            <ul className="tabs tabs-boxed">{renderDough}</ul>
+          </div>
+          <div className="card-actions items-center justify-between">
+            <h4 className="font-bold">15 USD</h4>
+            <button type="button" className="btn-primary btn">
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>

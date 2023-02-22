@@ -2,8 +2,8 @@ import { PizzaItem } from './PizzaItem'
 
 export const PizzaList = () => {
   return (
-    <div className="px-5 py-24" id="pizza-list">
-      <div className="flex flex-wrap">
+    <div className="container mx-auto px-5 py-24" id="pizza-list">
+      <div className="-mx-4 flex flex-wrap">
         <PizzaItem />
         <PizzaItem />
         <PizzaItem />

@@ -18,7 +18,7 @@ export const Hero = () => {
   }
 
   return (
-    <div className="hero min-h-[60vh] py-20">
+    <div className="container hero mx-auto min-h-[60vh] py-20">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img src={HeroImg} className="max-w-sm" />
         <div>
