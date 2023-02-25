@@ -1,4 +1,5 @@
 import { ChangeLanguageButtons } from '../locales/ChangeLanguageButtons'
+
 import { RegistrationContainer } from './Registration'
 
 const Logo = () => (
