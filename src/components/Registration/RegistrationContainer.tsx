@@ -1,5 +1,6 @@
-import { RegistrationForm } from './RegistrationForm'
 import { ProfileIcon } from '../../assets/icons-svg'
+
+import { RegistrationForm } from './RegistrationForm'
 
 export const RegistrationContainer = () => {
   return (

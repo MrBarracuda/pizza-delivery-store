@@ -7,11 +7,11 @@ export const ChangeLanguageButtons = () => {
 
   return (
     <>
-      <button type="button" onClick={() => changeLanguage('en')}>
-        English
+      <button type="button" className="btn-secondary btn-sm btn" onClick={() => changeLanguage('en')}>
+        EN
       </button>
-      <button type="button" onClick={() => changeLanguage('ua')}>
-        Ukrainian
+      <button type="button" className="btn-accent btn-sm btn" onClick={() => changeLanguage('ua')}>
+        UA
       </button>
     </>
   )
