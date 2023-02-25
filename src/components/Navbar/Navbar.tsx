@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom'
+
 import { Modal } from '../../common/Modal'
-import { RegistrationForm } from '../Registration/RegistrationForm'
+import { RegistrationForm } from '../Registration'
 
 import { Cart, Logo, Profile, ChangeLanguage } from './components'
-import { Drawer } from '../Drawer'
 
 export const Navbar = () => {
   const count = 3
@@ -20,18 +21,12 @@ export const Navbar = () => {
             <RegistrationForm />
           </Modal>
 
-          <ul tabIndex={0} className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow">
+          <ul className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow">
             <li>
-              <a className="justify-between">
-                Profile
-                {/* <span className="badge">New</span> */}
-              </a>
+              <Link to="/">Settings</Link>
             </li>
             <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
+              <Link to="/">Logout</Link>
             </li>
           </ul>
         </div>

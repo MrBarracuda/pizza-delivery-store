@@ -14,7 +14,7 @@ export const TextInput = forwardRef<HTMLInputElement, InputProps>(({ label, name
   return (
     <div>
       <label htmlFor={name} className="label">
-        <span className="label-text">{label}</span>
+        <span className="label-text">{t(label)}</span>
       </label>
       <input
         type={type}

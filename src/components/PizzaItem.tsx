@@ -14,12 +14,14 @@ export const PizzaItem = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const renderSizes = sizes.map((item) => (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
     <li key={item} onClick={() => setIsActive(item)} className={`tab flex-1 ${isActive === item ? 'tab-active' : ''}`}>
       {item}
     </li>
   ))
 
   const renderDough = dough.map((item) => (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
     <li
       key={item}
       onClick={() => setIsActive2(item)}
@@ -29,7 +31,9 @@ export const PizzaItem = () => {
     </li>
   ))
 
-  const handleClick = () => {}
+  const handleClick = () => {
+    setIsLoading(false)
+  }
 
   return (
     <div className="card-compact w-full p-2 md:w-1/2 lg:w-1/3 xl:w-1/4">

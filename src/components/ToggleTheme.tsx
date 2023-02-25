@@ -1,5 +1,3 @@
-import { MoonIcon, SunIcon } from '../assets/icons-svg'
-
 export const ToggleTheme = () => (
   <input
     type="checkbox"

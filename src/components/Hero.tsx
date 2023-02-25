@@ -24,7 +24,7 @@ export const Hero = () => {
         <div>
           <h1 className="overflow-y-hidden text-5xl font-bold	">{heroText.title}</h1>
           <p className="py-6">{heroText.description}</p>
-          <button onClick={handleClickScroll} className="btn-primary btn">
+          <button type="button" onClick={handleClickScroll} className="btn-primary btn">
             {heroText.button}
             <span className="ml-3">
               <ArrowDown />
