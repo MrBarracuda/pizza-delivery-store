@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
-export const ChangeLanguageButtons = () => {
+export const ChangeLanguage = () => {
   const { i18n } = useTranslation()
 
   const changeLanguage = (language: string) => i18n.changeLanguage(language)

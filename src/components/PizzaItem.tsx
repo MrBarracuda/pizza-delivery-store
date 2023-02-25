@@ -1,8 +1,8 @@
+import clsx from 'clsx'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Pizza from '../assets/Margarita.jpg'
-import clsx from 'clsx'
 
 export const PizzaItem = () => {
   const title = 'Pizza Margarita'
