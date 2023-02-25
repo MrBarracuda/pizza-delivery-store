@@ -7,5 +7,14 @@
   "Password must be at least 6 characters": "Пароль повинен містити принаймні 6 символів",
   "Confirm Password is required": "Підтвердження пароля є обов'язковим",
   "You must accept Terms and Conditions": "Ви повинні прийняти Умови та Положення",
-  "Password don't match": "Паролі не співпадають"
+  "Password don't match": "Паролі не співпадають",
+  "Italian-Inspired Pizza with a Contemporary Twist": "Італійська піца з сучасним твістом",
+  "Experience a new take on Italian-style pizza with our contemporary twist on classic recipes. Made with only the freshest ingredients and hand-crafted for maximum flavor, our pizza is delivered straight to your door. Order now and discover the delicious possibilities!": "Відчуйте новий підхід до італійської піци з нашим сучасним твістом класичних рецептів. Зроблена лише зі свіжих інгредієнтів та ручної роботи для максимального смаку, наша піца доставляється прямо до вашої двері. Замовте зараз та відкрийте для себе смачні можливості!",
+  "order delivery": "Замовити Доставку",
+  "small": "мала",
+  "medium": "середня",
+  "large": "велика",
+  "thin": "тонке",
+  "thick": "пишне",
+  "add to cart": "в кошик"
 }
