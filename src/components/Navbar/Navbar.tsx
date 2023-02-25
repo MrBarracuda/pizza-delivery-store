@@ -2,6 +2,7 @@ import { Modal } from '../../common/Modal'
 import { RegistrationForm } from '../Registration/RegistrationForm'
 
 import { Cart, Logo, Profile, ChangeLanguage } from './components'
+import { Drawer } from '../Drawer'
 
 export const Navbar = () => {
   const count = 3

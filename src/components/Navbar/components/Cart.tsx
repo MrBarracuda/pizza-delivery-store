@@ -6,7 +6,7 @@ interface CartProps {
 export const Cart = ({ count }: CartProps) => {
   return (
     <div className="dropdown-end dropdown">
-      <label tabIndex={0} className="btn-ghost btn-circle btn">
+      <label htmlFor="my-drawer-4" tabIndex={0} className="btn-ghost drawer-button btn-circle btn">
         <div className="indicator">
           <CartIcon />
           <span className="badge badge-sm indicator-item">{count}</span>
