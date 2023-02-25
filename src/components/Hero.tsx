@@ -18,9 +18,9 @@ export const Hero = () => {
   }
 
   return (
-    <div className="container hero mx-auto min-h-[60vh] py-20">
+    <div className="container hero mx-auto min-h-[60vh] py-20 px-2">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img src={HeroImg} className="max-w-sm" />
+        <img src={HeroImg} className="max-w-sm" alt="the pizza greets you" />
         <div>
           <h1 className="text-5xl font-bold">{heroText.title}</h1>
           <p className="py-6">{heroText.description}</p>
