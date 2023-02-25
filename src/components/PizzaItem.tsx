@@ -1,18 +1,20 @@
 import { useState } from 'react'
 
 import Pizza from '../assets/Margarita.jpg'
+import {useTranslation} from "react-i18next";
 
 export const PizzaItem = () => {
   const title = 'Pizza Margarita'
   const ingridiets = "Double portion of Mozzarella, Domino's Sauce"
   const sizes = ['small', 'medium', 'large']
-  const dough = ['slim', 'regular']
+  const dough = ['thin', 'thick']
   const [isActive, setIsActive] = useState(sizes[0])
   const [isActive2, setIsActive2] = useState(dough[0])
+  const { t } = useTranslation()
 
   const renderSizes = sizes.map((item) => (
     <li key={item} onClick={() => setIsActive(item)} className={`tab flex-1 ${isActive === item ? 'tab-active' : ''}`}>
-      {item}
+      {t(item)}
     </li>
   ))
 
@@ -22,7 +24,7 @@ export const PizzaItem = () => {
       onClick={() => setIsActive2(item)}
       className={`tab flex-1 ${isActive2 === item ? 'tab-active' : ''}`}
     >
-      {item}
+      {t(item)}
     </li>
   ))
 
@@ -40,7 +42,7 @@ export const PizzaItem = () => {
           <div className="card-actions items-center justify-between">
             <h4 className="font-bold">15 USD</h4>
             <button type="button" className="btn-primary btn">
-              Buy Now
+              {t('add to cart')}
             </button>
           </div>
         </div>
