@@ -42,10 +42,13 @@ export const PizzaItem = () => {
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
           <p>{ingredients}</p>
-          <Link className="link" to="pizza/2">
-            Change ingredients
-          </Link>
-          <div className="base-100 my-2 rounded-md font-bold">
+
+          <div className="base-100 mb-1 rounded-md font-bold">
+            <div className="mb-3">
+              <Link className="link-primary link" to="pizza/2">
+                Change ingredients
+              </Link>
+            </div>
             <ul className="tabs tabs-boxed mb-1">{renderSizes}</ul>
             <ul className="tabs tabs-boxed">{renderDough}</ul>
           </div>
