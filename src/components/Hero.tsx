@@ -22,7 +22,7 @@ export const Hero = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img src={HeroImg} className="max-w-sm" alt="the pizza greets you" />
         <div>
-          <h1 className="text-5xl font-bold">{heroText.title}</h1>
+          <h1 className="text-5xl font-bold overflow-y-hidden	">{heroText.title}</h1>
           <p className="py-6">{heroText.description}</p>
           <button onClick={handleClickScroll} className="btn-primary btn">
             {heroText.button}
