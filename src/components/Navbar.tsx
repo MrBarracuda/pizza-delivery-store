@@ -1,4 +1,5 @@
 import { ChangeLanguageButtons } from '../locales/ChangeLanguageButtons'
+import { RegistrationContainer } from './Registration'
 
 const Logo = () => (
   <a className="btn-ghost btn text-xl uppercase">
@@ -13,6 +14,7 @@ export const Navbar = () => {
         <Logo />
       </div>
       <div className="flex-none">
+        <RegistrationContainer />
         <ChangeLanguageButtons />
         <div className="dropdown-end dropdown">
           <label tabIndex={0} className="btn-ghost btn-circle btn">
