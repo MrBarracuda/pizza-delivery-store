@@ -4,13 +4,14 @@
 
 @layer base {
   * {
-    margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
 
   body {
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
+    /*background-color: #f9fafb;*/
   }
 
   /* Scroll */
