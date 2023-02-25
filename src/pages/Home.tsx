@@ -1,11 +1,16 @@
+import { lazy, Suspense } from 'react'
+
 import { Hero } from '../components/Hero'
-import { PizzaList } from '../components/PizzaList'
+
+const PizzaList = lazy(() => import('../components/PizzaList').then((res) => ({ default: res.PizzaList })))
 
 export const Home = () => {
   return (
     <>
       <Hero />
-      <PizzaList />
+      <Suspense fallback={<div>Loading...</div>}>
+        <PizzaList />
+      </Suspense>
     </>
   )
 }
