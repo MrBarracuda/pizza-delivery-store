@@ -19,7 +19,8 @@ export function ErrorMessage({ name }: { name?: string }) {
     <div className="alert alert-warning mt-2 text-xs shadow-lg">
       <div>
         <WarningIcon />
-        <span role="alert"> {t(error.message)}</span>
+        {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
+        <span role="alert"> {t(`${error.message}`)}</span>
       </div>
     </div>
   )
