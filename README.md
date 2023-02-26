@@ -4,7 +4,7 @@ Pizza Delivery is my first full-stack project for my portfolio.
 
 ## Installation
 
-Use the package manager [pnpm](https://pnpm.io/installation/) to install foobar.
+Use the package manager [pnpm](https://pnpm.io/installation/) to install pizza-delivery.
 
 ```bash
 pnpm install
