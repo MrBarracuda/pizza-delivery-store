@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Routing } from 'pages'
+import { Routing } from 'pages/routes'
 
 import { isDevEnv } from '../shared/api/config'
 

@@ -11,7 +11,7 @@ export const RegistrationForm = () => {
     <Form
       form={form}
       onSubmit={(data) => {
-        console.log(data)
+        console.debug(data)
         form.reset()
       }}
       className="form-control w-full max-w-xs"

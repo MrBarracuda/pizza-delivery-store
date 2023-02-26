@@ -1,45 +1,70 @@
+import clsx from 'clsx'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import Pizza from '../assets/Margarita.jpg'
+import type { Pizza } from './PizzaList'
 
-export const PizzaItem = () => {
-  const title = 'Pizza Margarita'
-  const ingridiets = "Double portion of Mozzarella, Domino's Sauce"
-  const sizes = ['small', 'medium', 'large']
-  const dough = ['slim', 'regular']
-  const [isActive, setIsActive] = useState(sizes[0])
-  const [isActive2, setIsActive2] = useState(dough[0])
+const typeNames = ['thin', 'thick']
+const sizesNames = ['small', 'medium', 'large']
+
+export const PizzaItem = ({ id, title, imageUrl, price, sizes, types, ingredients }: Pizza) => {
+  // TODO Category, rating search, loading button onClick
+  const [activeSize, setActiveSize] = useState(0)
+  const [activeType, setActiveType] = useState(0)
+  const isLoading = false
 
   const renderSizes = sizes.map((item) => (
-    <li key={item} onClick={() => setIsActive(item)} className={`tab flex-1 ${isActive === item ? 'tab-active' : ''}`}>
-      {item}
-    </li>
+    <button
+      type="button"
+      key={item}
+      onClick={() => setActiveSize(item)}
+      className={`tab flex-1 ${activeSize === item ? 'tab-active' : ''}`}
+    >
+      {sizesNames[item]}
+    </button>
   ))
 
-  const renderDough = dough.map((item) => (
-    <li
+  const renderTypes = types.map((item) => (
+    <button
+      type="button"
       key={item}
-      onClick={() => setIsActive2(item)}
-      className={`tab flex-1 ${isActive2 === item ? 'tab-active' : ''}`}
+      onClick={() => setActiveType(item)}
+      className={`tab flex-1 ${activeType === item ? 'tab-active' : ''}`}
     >
-      {item}
-    </li>
+      {typeNames[item]}
+    </button>
   ))
+
+  const handleClick = () => {
+    const item = {
+      id,
+      title,
+      price,
+      imageUrl,
+      type: typeNames[activeType],
+      size: sizesNames[activeSize],
+      count: 0,
+    } as const
+    console.debug(item)
+  }
 
   return (
     <div className="card-compact w-full p-2 md:w-1/2 lg:w-1/3 xl:w-1/4">
       <div className="base-content rounded-md p-2 shadow-md">
-        <img src={Pizza} className="rounded-md" alt="Pizza" />
+        <Link key={id} to={`pizzas/${id}`}>
+          <img src={imageUrl} className="rounded-md" alt="Pizza" />
+        </Link>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
-          <p>{ingridiets}</p>
-          <div className="base-100 my-2 rounded-md font-bold">
-            <ul className="tabs tabs-boxed mb-1">{renderSizes}</ul>
-            <ul className="tabs tabs-boxed">{renderDough}</ul>
+          <p>{ingredients}</p>
+          <div className="base-100 my-1 rounded-md font-bold">
+            <div className="tabs tabs-boxed mb-1">{renderSizes}</div>
+            <div className="tabs tabs-boxed">{renderTypes}</div>
           </div>
           <div className="card-actions items-center justify-between">
-            <h4 className="font-bold">15 USD</h4>
-            <button type="button" className="btn-primary btn">
+            <h4 className="text-lg font-bold">${price}</h4>
+            {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
+            <button onClick={handleClick} type="button" className={clsx('btn-primary btn', isLoading && 'loading')}>
               Buy Now
             </button>
           </div>
