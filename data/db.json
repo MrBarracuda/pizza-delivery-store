@@ -2,29 +2,29 @@
   "pizzas": [
     {
       "id": 1,
-      "imageUrl": "public/pizzas/pepperoni.jpg",
+      "imageUrl": "/pizzas/pepperoni.jpg",
       "title": "Pepperoni",
       "ingredients": "Pepperoni, Mozzarella, Domino's Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 280,
       "category": 0,
-      "rating": 4
+      "rating": 5
     },
     {
       "id": 2,
-      "imageUrl": "public/pizzas/hawaiian.jpg",
+      "imageUrl": "/pizzas/hawaiian.jpg",
       "title": "Hawaiian",
       "ingredients": "Pineapple, Chicken, Mozzarella, Domino's sauce",
       "types": [0],
       "sizes": [0, 1],
       "price": 240,
       "category": 0,
-      "rating": 6
+      "rating": 4
     },
     {
       "id": 3,
-      "imageUrl": "public/pizzas/meatzza.jpg",
+      "imageUrl": "/pizzas/meatzza.jpg",
       "title": "MeatZZa",
       "ingredients": "Bacon, Bavarian Sausages, Pepperoni, Parmesan, Mozzarella, Ham Domino's Sauce",
       "types": [0],
@@ -35,102 +35,102 @@
     },
     {
       "id": 4,
-      "imageUrl": "public/pizzas/five-cheese.jpg",
+      "imageUrl": "/pizzas/five-cheese.jpg",
       "title": "Five Cheese",
       "ingredients": "Bergader Blue, Parmesan, Feta, Cheddar, Mozzarella, Alfredo Sauce",
       "types": [0],
       "sizes": [0, 1, 2],
       "price": 190,
       "category": 2,
-      "rating": 2
+      "rating": 5
     },
     {
       "id": 5,
-      "imageUrl": "public/pizzas/munich.jpg",
+      "imageUrl": "/pizzas/munich.jpg",
       "title": "Munich",
       "ingredients": "Mustard, Bavarian Sausages, Tomatoes, White Sausages, Ham, Mozzarella, BBQ Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 285,
       "category": 3,
-      "rating": 8
+      "rating": 3
     },
     {
       "id": 6,
-      "imageUrl": "public/pizzas/curry.jpg",
+      "imageUrl": "/pizzas/curry.jpg",
       "title": "Curry",
       "ingredients": "Pineapple, Chicken, Onion, Mozzarella, Curry Sauce",
       "types": [0],
       "sizes": [0, 1],
       "price": 310,
       "category": 2,
-      "rating": 2
+      "rating": 4
     },
     {
       "id": 7,
-      "imageUrl": "public/pizzas/sweet-n-sour.jpg",
+      "imageUrl": "/pizzas/sweet-n-sour.jpg",
       "title": "Sweet-n-Sour",
       "ingredients": "Bell Peppers, Mushrooms, Feta, Meatballs, Mozzarella, Sweet and Sour Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 270,
       "category": 1,
-      "rating": 9
+      "rating": 3
     },
     {
       "id": 8,
-      "imageUrl": "public/pizzas/chili.jpg",
+      "imageUrl": "/pizzas/chili.jpg",
       "title": "Chili",
       "ingredients": "Bell Peppers, Pepperoni, Tomatoes, Jalapeno, Mozzarella, Chili Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 160,
       "category": 4,
-      "rating": 10
+      "rating": 3
     },
     {
       "id": 9,
-      "imageUrl": "public/pizzas/manhattan.jpg",
+      "imageUrl": "/pizzas/manhattan.jpg",
       "title": "Manhattan",
       "ingredients": "Double portion of Mushrooms, Pepperoni, Mozzarella, Alfredo Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 300,
       "category": 5,
-      "rating": 10
+      "rating": 4
     },
     {
       "id": 10,
-      "imageUrl": "public/pizzas/texas.jpg",
+      "imageUrl": "/pizzas/texas.jpg",
       "title": "Texas",
       "ingredients": "Mushrooms, Bavarian Sausages, Corn, Onion, Mozzarella, BBQ Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 230,
       "category": 5,
-      "rating": 6
+      "rating": 3
     },
     {
       "id": 11,
-      "imageUrl": "public/pizzas/margherita.jpg",
+      "imageUrl": "/pizzas/margherita.jpg",
       "title": "Margherita",
       "ingredients": "Double portion of Mozzarella, Domino's Sauce",
       "types": [0, 1],
       "sizes": [0, 1],
       "price": 230,
       "category": 5,
-      "rating": 10
+      "rating": 5
     },
     {
       "id": 12,
-      "imageUrl": "public/pizzas/ham-n-mushroom.jpg",
+      "imageUrl": "/pizzas/ham-n-mushroom.jpg",
       "title": "Ham-n-Mushroom",
       "ingredients": "Ham, Mushrooms, Mozzarella, Domino's Sauce",
       "types": [0, 1],
       "sizes": [0, 1, 2],
       "price": 230,
       "category": 5,
-      "rating": 10
+      "rating": 4
     }
   ]
 }
