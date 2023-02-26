@@ -1,28 +1,9 @@
-import { useQuery } from '@tanstack/react-query'
-import ky from 'ky'
+import { usePizzasQuery } from '../features/pizza-block/usePizzasQuery'
 
 import { PizzaItem } from './PizzaItem'
 
-export interface Pizza {
-  id: number
-  imageUrl: string
-  ingredients: string
-  title: string
-  types: number[]
-  sizes: number[]
-  price: number
-  category: number
-  rating: number
-}
-
 export const PizzaList = () => {
-  const fetchPizzas = async (): Promise<Pizza[]> => {
-    const res = await ky('http://localhost:8000/pizzas')
-    if (!res.ok) throw new Error('Failed to fetch todos!')
-    return res.json()
-  }
-
-  const { data, isLoading, isSuccess } = useQuery({ queryFn: fetchPizzas, queryKey: ['pizzas'] })
+  const { data, isLoading, isSuccess } = usePizzasQuery()
 
   const pizzas = isSuccess && data.map((pizza) => <PizzaItem key={pizza.id} {...pizza} />)
 
