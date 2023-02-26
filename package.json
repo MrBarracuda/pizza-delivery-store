@@ -12,7 +12,8 @@
     "prettier": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint src .",
-    "lint:fix": "eslint src --fix"
+    "lint:fix": "eslint src --fix",
+    "serve": "json-server --watch data/db.json -p 8000"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
