@@ -16,7 +16,8 @@ type SetValue<T> = Dispatch<SetStateAction<T>>
 // A wrapper for "JSON.parse()"" to support "undefined" value
 function parseJSON<T>(value: string | null): T | undefined {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     return value === 'undefined' ? undefined : JSON.parse(value ?? '')
   } catch {
     console.error('parsing error on', { value })
