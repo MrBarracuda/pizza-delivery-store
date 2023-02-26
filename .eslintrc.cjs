@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  plugins: ['react', '@typescript-eslint', 'deprecation', 'eslint-comments', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'deprecation', 'eslint-comments', '@tanstack/query', 'prettier'],
   env: {
     browser: true,
     es2021: true,
@@ -15,6 +15,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
     'plugin:prettier/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

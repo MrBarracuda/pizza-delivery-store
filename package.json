@@ -37,7 +37,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "@tanstack/eslint-plugin-query": "^4.24.11",
     "@tanstack/react-query-devtools": "^4.24.10",
+    "@total-typescript/ts-reset": "^0.3.7",
     "@types/compose-function": "^0.0.30",
     "@types/node": "^18.14.1",
     "@types/react": "^18.0.28",
