@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import type { Pizza } from './PizzaList'
+import type { Pizza } from '../features/pizza-block/usePizzasQuery'
 
 const typeNames = ['thin', 'thick']
 const sizesNames = ['small', 'medium', 'large']
@@ -65,7 +65,7 @@ export const PizzaItem = ({ id, title, imageUrl, price, sizes, types, ingredient
             <h4 className="text-lg font-bold">${price}</h4>
             {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
             <button onClick={handleClick} type="button" className={clsx('btn-primary btn', isLoading && 'loading')}>
-              Buy Now
+              Add to Cart
             </button>
           </div>
         </div>

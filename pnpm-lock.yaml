@@ -3,8 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@hookform/resolvers': ^2.9.11
   '@tailwindcss/typography': ^0.5.9
+  '@tanstack/eslint-plugin-query': ^4.24.11
   '@tanstack/react-query': ^4.24.10
   '@tanstack/react-query-devtools': ^4.24.10
+  '@total-typescript/ts-reset': ^0.3.7
   '@types/compose-function': ^0.0.30
   '@types/node': ^18.14.1
   '@types/react': ^18.0.28
@@ -74,7 +76,9 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
+  '@tanstack/eslint-plugin-query': 4.24.11
   '@tanstack/react-query-devtools': 4.24.10_636dldj5wfr5vkyyqzs5k363kq
+  '@total-typescript/ts-reset': 0.3.7
   '@types/compose-function': 0.0.30
   '@types/node': 18.14.1
   '@types/react': 18.0.28
@@ -536,6 +540,11 @@ packages:
       tailwindcss: 3.2.7_postcss@8.4.21
     dev: true
 
+  /@tanstack/eslint-plugin-query/4.24.11:
+    resolution:
+      { integrity: sha512-pDh6xAZP4+raK2dJiyhxxh/ohoTnb8dhgM4j9QIxtby5ZX578bdDgN/SI+qdOBAnuygkmMr9hP3Lr9Lu0ikaMA== }
+    dev: true
+
   /@tanstack/match-sorter-utils/8.7.6:
     resolution:
       { integrity: sha512-2AMpRiA6QivHOUiBpQAVxjiHAA68Ei23ZUMNaRJrN6omWiSFLoYrxGcT6BXtuzp0Jw4h6HZCmGGIM/gbwebO2A== }
@@ -581,6 +590,11 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
+
+  /@total-typescript/ts-reset/0.3.7:
+    resolution:
+      { integrity: sha512-yXt2BRRVCJVvzWaxac5n0nCXzIrQEBE/MeYlNQ8/Iq7UeelNmm/AdnUAu18ilSS893mbEQ4u6whPt/HvOPc4rw== }
+    dev: true
 
   /@types/compose-function/0.0.30:
     resolution:

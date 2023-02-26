@@ -4,7 +4,7 @@ import { Checkout } from './Checkout'
 import { Home } from './Home'
 import { Layout } from './Layout'
 import { NotFound } from './NotFound'
-import { Pizza } from './Pizza'
+import { PizzaDetails } from './Pizza'
 import { Settings } from './Settings'
 
 export const Routing = () => {
@@ -12,7 +12,7 @@ export const Routing = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="pizzas/:id" element={<Pizza />} />
+        <Route path="pizzas/:id" element={<PizzaDetails />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
