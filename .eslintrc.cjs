@@ -54,6 +54,7 @@ module.exports = {
 
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     '@typescript-eslint/consistent-type-exports': ['error', { fixMixedExportsWithInlineTypeSpecifier: true }],
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: true }],

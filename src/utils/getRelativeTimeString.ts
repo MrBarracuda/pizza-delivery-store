@@ -20,6 +20,5 @@ export const getRelativeTimeString = (date: Date | number, language = navigator.
   // Intl.RelativeTimeFormat do its magic
   const rtf = new Intl.RelativeTimeFormat(language, { numeric: 'auto' })
 
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return rtf.format(Math.floor(deltaSeconds / divisor!), units[unitIndex] ?? 'second')
 }

@@ -1,21 +1,21 @@
-enum Sizes {
-  Medium = 1,
-  Large = 2,
-}
+const sizes = {
+  medium: 1,
+  large: 2,
+} as const
 
-enum Percentage {
-  Low = 5,
-  Average = 10,
-  High = 20,
-}
+const percentage = {
+  low: 5,
+  average: 10,
+  high: 20,
+} as const
 
 const addPercentage = (price: number, percent: number) => Math.round(price + (price / 100) * percent)
 // const extraDoughPrice = (price: number, type: number) => type === 1 ? addPercentage(price, Percentage.Low) : price
 
 export const extraPrice = (price: number, type: number, size: number) => {
-  const currentPrice = type === 1 ? addPercentage(price, Percentage.Low) : price
+  const currentPrice = type === 1 ? addPercentage(price, percentage.low) : price
   // const currentPrice = extraDoughPrice(price, type)
-  if (size === Sizes.Large) return addPercentage(currentPrice, Percentage.High)
-  if (size === Sizes.Medium) return addPercentage(currentPrice, Percentage.Average)
+  if (size === sizes.large) return addPercentage(currentPrice, percentage.high)
+  if (size === sizes.medium) return addPercentage(currentPrice, percentage.average)
   return currentPrice
 }
