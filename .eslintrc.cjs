@@ -44,6 +44,13 @@ module.exports = {
       },
     ],
     camelcase: 'off',
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'TSEnumDeclaration',
+        message: "Don't declare enums",
+      },
+    ],
 
     // '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
